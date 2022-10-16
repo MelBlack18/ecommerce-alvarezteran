@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: 'Quicksand', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* NAVBAR */
+
+.navbar {
+    background-color: #f0f0f0;
+    box-shadow: 0px 0px 3px 0.2px #cccccc91;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo{
+  max-width: 20%;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    width: 60%;
+    justify-content: space-evenly;
+}
+
+.menu li {
+    margin: 0px 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.menu a:hover{
+  font-weight: lighter;
+}
+
+.cart-widget {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 20%;
+  justify-content: flex-end;
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* MAIN */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main {
+    min-height: 80vh;
+    margin: 20px;
+    text-align: center;
 }
