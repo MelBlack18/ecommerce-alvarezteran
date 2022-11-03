@@ -1,13 +1,19 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Header from './components/Header';
-import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/Product/ItemDetailContainer';
+import ItemListContainer from './components/Product/ItemListContainer';
+import Header from './components/Main/Header';
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Header />
-      <ItemListContainer greeting={"Pastelería y Panadería para la hora del té"} />
-    </>
+      <Routes>
+        <Route path='/' element={<ItemListContainer />} />
+        <Route path='/category/:id' element={ <ItemListContainer />} />
+        <Route path='/item/:id' element={ <ItemDetailContainer />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
