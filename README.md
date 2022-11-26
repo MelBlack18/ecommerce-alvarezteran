@@ -11,6 +11,8 @@ Los productos además pueden eliminarse de a uno desde el Cart, o vaciarse por c
 
 Gracias al uso del Context la cantidad de cada ítem se guarda en cualquier etapa de la app, permitiendo que el usuario agregue un producto, luego otro y vuelva al anterior conservando en el contador la cantidad que había agregado, y permitiendo que se siga sumando a esa misma cantidad. Este flujo también se conserva si se ingresa al Cart y se vuelve hacia el ítem, tanto para sumar como para restar cantidades.
 
+La versión online del proyecto puede verse aquí: https://baking-mel.vercel.app/
+
 ## Componentes Generados
 La app está compuesta por cuatro grupos de componentes:
 
