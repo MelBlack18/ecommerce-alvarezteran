@@ -55,20 +55,21 @@ const Checkout = () => {
 
   return (
     <div>
-      <h1>Checkout</h1>
+      <div className='titulocheckout'><h1>Checkout</h1><Link to="/cart">(volver atrás)</Link></div>
+      
       <h2>Resumen de la compra</h2>
 
       {cartProds.map((producto) => {
-            return <div key={producto.id}>
+            return <div key={producto.id} className="item">
               <p>{producto.title}</p>
               <p>${producto.price}.- x {producto.cant} unidades = ${producto.price*producto.cant}.-</p>
             </div>
         })}
-      <p>Total a Pagar: ${totalCompra(cartProds)}.-</p>
+      <p className='total'>Total a Pagar: ${totalCompra(cartProds)}.-</p>
 
       <h2>Datos del Comprador</h2>
 
-      <form onSubmit={enviarDatos}>
+      <form onSubmit={enviarDatos} className="formulario">
         <input type="text" name='nombre' value={data.nombre} onChange={handleChange} />
         <input type="text" name='apellido' value={data.apellido} onChange={handleChange} />
         <input type="text" name='telefono' value={data.telefono} onChange={handleChange} />

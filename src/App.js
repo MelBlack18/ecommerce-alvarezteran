@@ -2,17 +2,17 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import ItemDetailContainer from './components/Product/ItemDetailContainer';
 import ItemListContainer from './components/Product/ItemListContainer';
-import Header from './components/Main/Header';
 import Cart from './components/Cart/Cart';
 import CartProvider from './context/CartContext';
 import Checkout from './components/Checkout/Checkout';
 import OrderPlaced from './components/Checkout/OrderPlaced'
+import Navbar from './components/Main/Navbar';
 
 function App() {
   return (
     <BrowserRouter>
       <CartProvider>
-        <Header />
+        <Navbar />
         <Routes>
           <Route path='/' element={<ItemListContainer />} />
           <Route path='/category/:id' element={ <ItemListContainer /> } />

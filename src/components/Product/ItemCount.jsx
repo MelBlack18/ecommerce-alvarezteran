@@ -11,15 +11,16 @@ const ItemCount = ({max, onAdd}) => {
     const [count, setCount] = useState(current)
 
     useEffect(() => {
-        if (count != 0 && count != cantInCart(id)) {
+        if (count !== 0 && count !== cantInCart(id)) {
             onAdd(count)
         } else if (count === 0 && isInCart(id)) {
             eliminarProd(id)
         }
     }, [count])
 
-    const toastBorrar = () => {toast.error('Producto Eliminado del Carrito', {
-        position: "bottom-left",
+    const toastBorrar = () => {toast.error( count === 1 ? 'Se eliminó el producto del carrito' : 'Se eliminó una unidad del carrito',
+        {
+        position: "bottom-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -29,8 +30,9 @@ const ItemCount = ({max, onAdd}) => {
         theme: "light",
         });}
         
-    const toastSumar = () => {toast.success('Producto Añadido al Carrito', {
-        position: "bottom-left",
+    const toastSumar = () => {toast.success( count === 0 ? 'Se añadió el producto del carrito' : 'Se sumó una unidad del carrito', 
+        {
+        position: "bottom-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,

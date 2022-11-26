@@ -66,11 +66,6 @@ body {
   margin: 30px;
 }
 
-main {
-  min-height: 80vh;
-  margin: 20px;
-}
-
 .item-list {
   display: flex;
   justify-content: center;
@@ -111,5 +106,35 @@ main {
   background-color: #fff;
   border: none;
   width: 40px;
+  text-align: center;
+}
+
+.total{
+  margin: 0px 0px 20px 16px;
+  font-weight: bold;
+}
+
+.formulario{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 20px 0px 0px 16px;
+  width: 30%;
+}
+
+.formulario :last-child{
+  margin-top: 20px;
+  width: 40%;
+}
+
+.titulocheckout{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.boton-chko{
+  font-size: large;
   text-align: center;
 }
