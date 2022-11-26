@@ -21,14 +21,18 @@ body {
     align-items: center;
 }
 
+.linklogo{
+  width: 25%;
+}
+
 .logo{
-  max-width: 50%;
+  max-width: 100%;
 }
 
 .menu {
     display: flex;
     list-style: none;
-    width: 60%;
+    width: 70%;
     justify-content: space-evenly;
 }
 
@@ -48,8 +52,9 @@ body {
 
 .cart-widget {
   display: flex;
-  width: 20%;
-  justify-content: flex-end;
+  flex-direction: row;
+  width: 5%;
+  justify-content: space-evenly;
 }
 
 /* MAIN */
@@ -89,4 +94,22 @@ main {
 
 .info h2 {
   font-size: 20px;
+}
+
+.botones{
+  display: flex;
+  flex-direction: row;
+}
+
+.botones button{
+  width: 30px;
+  border: 1px solid black;
+  background-color: #fff;
+}
+
+.cantidad{
+  background-color: #fff;
+  border: none;
+  width: 40px;
+  text-align: center;
 }
