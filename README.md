@@ -97,4 +97,4 @@ Clickeando en dicho botón la compra se almacena en Firestore y el carrito actua
 
 Este enlace es accesible en cualquier momento y contiene todo el detalle de la compra, el horario en q fue generada y su estado.
 
-![OrderPlaced](./public/img/.png)
+![OrderPlaced](./public/img/OrderPlaced.png)
